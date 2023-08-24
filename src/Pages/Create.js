@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Add from '../Components/Add';
 
 const Create = () =>{
     return(
         <div>
-            <h1>Create !</h1>
+            <Add />
         </div>
     );
 };
