@@ -1,19 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-import Work from './Components/Work'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Dashboard from './Pages/Dashboard';
+import Questionnaire from './Pages/Questionnaire';
+import Create from './Pages/Create'
+import Sidebar from './Components/Sidebar';
 
 function App() {
 
-  const btnIsClicked = () =>{
-    console.log("Lesego btn is pressed");
-  }
+
 
 
   return (
-    <div className="App">
-      <h1>React responding well!</h1>
-      <Work id="submit-btn" label="Lesego" btn={btnIsClicked} />
-    </div>
+    <BrowserRouter>
+      <Sidebar>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/questionnaire" element={<Questionnaire />} />
+          <Route path="/create" element={<Create />} />
+        </Routes>
+      </Sidebar>
+    </BrowserRouter>
   );
 }
 
