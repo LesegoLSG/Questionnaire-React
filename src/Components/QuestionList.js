@@ -8,7 +8,10 @@ const QuestionList = ({questions, onDelete}) => {
     return (
        <div className='main-question'>
        {questions.map((quest) =>(
-        <Question key={quest.id} quest={quest} onDelete={onDelete}/>
+        <Question 
+        key={quest.id} 
+        quest={quest} 
+        onDelete={onDelete}/>
        ))}
        </div>
     );
