@@ -1,0 +1,12 @@
+.no-question-container{
+    position:absolute;
+    left:35%;
+    top:50%;
+
+    width:500px;
+    height:100px;
+    align-items: center;
+    background-color:var(--question-color);
+    text-align: center;
+    
+}
