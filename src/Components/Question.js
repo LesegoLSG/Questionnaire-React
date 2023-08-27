@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Stylesheet/Question.css'
+import '../Stylesheet/Quiz.css'
 import { FaPen, FaTrash } from 'react-icons/fa'
 const Question = ({quest,onDelete}) => {
     return (
