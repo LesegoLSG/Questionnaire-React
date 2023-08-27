@@ -1,0 +1,32 @@
+.Quiz-container{
+    display: flex;
+    background-color: blue;
+    width:800px;
+}
+
+.Quiz-question{
+    background-color: var(--question-color);
+    width:500px;
+    min-height:50px;
+    margin-bottom: 10px;
+    border-radius:10px;
+}
+
+.radio-question{
+    background-color: chartreuse;
+    display:flex;
+    width:300px;
+    padding:13px 5px 0px 5px;
+    font-size:20px;
+    justify-content: space-between;
+}
+.radio-question .radio-separator{
+    color:red;
+    display:grid;
+}
+.radio-question label{
+   
+
+}
+
+
