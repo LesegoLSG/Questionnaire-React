@@ -1,9 +1,12 @@
 import React from 'react'
+import '../Stylesheet/NoQuestion.css'
 
 const NoQuestion = () =>{
     return(
-        <div>
-            <h1>No Questions,click on add button to add question</h1>
+        <div className="no-question-container">
+            
+            <h1>No Questions</h1>
+            <h1>Kindly add above</h1>
         </div>
     );
 };

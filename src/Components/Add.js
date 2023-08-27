@@ -3,17 +3,17 @@ import '../Stylesheet/Add.css';
 import { useState } from 'react';
 
 
-const Add = ({onAdd}) => {
-    const [text,setText] = useState('');
+const Add = ({ onAdd }) => {
+    const [text, setText] = useState('');
 
-    const onSubmit = (e) =>{
+    const onSubmit = (e) => {
         e.preventDefault();
-        if(!text){
+        if (!text) {
             alert("Please add a question")
             return
         }
 
-        onAdd({text});
+        onAdd({ text });
         setText("");
     }
     return (
@@ -21,26 +21,23 @@ const Add = ({onAdd}) => {
 
             <form onSubmit={onSubmit}>
 
-                <table>
-                    <tr>
-                        <h1>Creating a Questionnaire !</h1>
-                    </tr>
-                    <tr>
-                        <input type="text"
-                            placeholder="Type your question here"
-                            //required
-                            id="add-input"
-                            value={text}
-                            onChange={(e) => setText(e.target.value)}
-                        />
-                    </tr>
-                    <tr>
-                        <button 
-                        className="btnAdd" 
-                        type="submit" 
-                        value="save">Add</button>
-                    </tr>
-                </table>
+                <h1>Creating a Questionnaire !</h1>
+                <div className="input-box">
+                <input type="text"
+                    placeholder="Type your question here"
+                    //required
+                   
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
+                />
+                </div>
+                <div className="input-btn">
+                <button
+                    className="btnAdd"
+                    type="submit"
+                    value="save">+ Add</button>
+                    </div>
+                
             </form>
         </div>
     );

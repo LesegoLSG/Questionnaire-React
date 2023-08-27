@@ -35,6 +35,7 @@ const Create = () =>{
         setQuestions(questions.filter((eQuestion) => eQuestion.id !==id))
     }
     return(
+        
         <div>
             <Add onAdd={addQuestion}/>
             {questions.length>0 ?(
@@ -43,6 +44,7 @@ const Create = () =>{
                 <NoQuestion/>
             )}
             </div>
+         
     );
 };
 

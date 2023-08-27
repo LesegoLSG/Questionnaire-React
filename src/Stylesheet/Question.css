@@ -32,8 +32,37 @@
    cursor: pointer;
 }
 */
-.q-container{
-    position:relative;
-    top:100px;
-    margin-top: 500px;
+.main-question{
+    position:absolute;
+    left:35%;
+    top:50%;
+    align-items: center;
+    background-color: blue;
+    
 }
+
+.container-question{
+    display: flex;
+  background-color: var(--question-color);
+    width:500px;
+    min-height:50px;
+    margin-bottom: 10px;
+    border-radius:10px;
+}
+
+.icons{
+    
+    background-color: chartreuse;
+    width:100px;
+    padding:13px 5px 0px 5px;
+    font-size:20px; 
+}
+.question{
+    width:450px;
+    background-color:blueviolet;
+}
+
+#trashicon{
+    float:right;
+}
+

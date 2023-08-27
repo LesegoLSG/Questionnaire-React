@@ -38,3 +38,13 @@
   }
 }
 */
+
+@import url(./Stylesheet/NoQuestion.css);
+
+:root{
+  --primary-color:#164B60;
+  --black-color:#000;
+  --question-color:#f3f5f2;
+}
+
+

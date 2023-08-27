@@ -6,13 +6,13 @@ const Question = ({quest,onDelete}) => {
          
        
        
-       <div className="container">
-            <div>
+       <div className="container-question">
+            <div className="question">
             <h3>{quest.text}</h3>
             </div>
-            <div className="icons">
-                <FaPen />
-                <FaTrash style={{cursor:"pointer"}} onClick={() =>onDelete(quest.id)}/>
+            <div className="icons" >
+                <FaPen style={{cursor:"pointer"}}/>
+                <FaTrash id="trashicon" style={{cursor:"pointer"}} onClick={() =>onDelete(quest.id)}/>
             </div>
        </div>
        
