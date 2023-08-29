@@ -1,7 +1,17 @@
+.main-Quiz{
+    position:absolute;
+    left:25%;
+    top:20%;
+    align-items: center;
+    
+}
+
 .Quiz-container{
     display: flex;
     background-color: blue;
     width:800px;
+    
+    
 }
 
 .Quiz-question{
@@ -20,13 +30,11 @@
     font-size:20px;
     justify-content: space-between;
 }
+
 .radio-question .radio-separator{
     color:red;
     display:grid;
 }
-.radio-question label{
-   
 
-}
 
 

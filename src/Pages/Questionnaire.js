@@ -1,34 +1,56 @@
 import React from 'react';
 import Quiz from '../Components/Quiz';
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import QuizList from '../Components/QuizList';
+import Dashboard from './Dashboard';
+import DashDisplay from '../Components/DashDisplay';
 
+const Questionnaire = () => {
 
-const Questionnaire = () =>{
-    
     const [questions, setQuestions] = useState([]);
-    //Loading data from server when page loads/refreshes
+    const [showDashboard, setShowDashboard] = useState(false);
+    const [rowCount, setRowCount] = useState(0);
+
     useEffect(() =>{
-        const getQuestions = async () =>{
+        fetch('http://localhost:5001/questions')
+        .then(response => response.json())
+        .then(data =>{
+            setQuestions(data);
+            setRowCount(data.length);
+        })
+        .catch(error =>{
+            console.error('Error fetching JSON data:', error);
+        });
+    },[]);
+   
+
+    //Loading data from server when page loads/refreshes
+    useEffect(() => {
+        const getQuestions = async () => {
             const questionsFromServer = await fetchQuestions();
-            
+
             setQuestions(questionsFromServer);
             //console.log(questionsFromServer);
         }
         getQuestions();
-    },[]);
+    }, []);
 
     //Fetching questions from json-server
-    const fetchQuestions = async () =>{
+    const fetchQuestions = async () => {
         const res = await fetch('http://localhost:5001/questions');
         const data = await res.json();
-        
+
         console.log(data);
         return data;
     }
-    
-    return(
-        <QuizList questions={questions} />
+
+    return (
+        <div>
+            <QuizList questions={questions} />
+            {!showDashboard &&
+                <DashDisplay rowCount={rowCount} />
+            }
+        </div>
     );
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import Question from '../Components/Question';
 import '../Stylesheet/Question.css';
 
-const QuestionList = ({questions, onDelete}) => {
+const QuestionList = ({questions, onDelete, onEdit}) => {
     
 
     return (
@@ -11,7 +11,8 @@ const QuestionList = ({questions, onDelete}) => {
         <Question 
         key={quest.id} 
         quest={quest} 
-        onDelete={onDelete}/>
+        onDelete={onDelete}
+        onEdit={onEdit}/>
        ))}
        </div>
     );

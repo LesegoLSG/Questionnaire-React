@@ -3,10 +3,14 @@ import Add from '../Components/Add';
 import Question from '../Components/Question';
 import QuestionList from '../Components/QuestionList';
 import NoQuestion from '../Components/NoQuestion';
+import Modal from '../Components/Modal';
 import { useState, useEffect } from 'react';
 
 const Create = () =>{
     const [questions , setQuestions]= useState( []);
+    const [modalOpen, setModalOpen] = useState(false);
+    
+   
 
     useEffect(() =>{
         const getQuestions = async () =>{
@@ -49,17 +53,46 @@ const Create = () =>{
             method:'DELETE',
         });
         setQuestions(questions.filter((eQuestion) => eQuestion.id !==id));
+        
     }
+
+    //Edit a question function
+    const handleEditRow = async(id) =>{
+      
+        /*
+        await fetch(`http://localhost:5001/questions/${id}`,{
+            method:'PUT',
+            headers:{
+                'Accept': 'application/json',
+                'Content-Type':'application/json'
+            },
+        });
+        */
+     
+        setModalOpen(!modalOpen);
+        console.log(id);
+        
+    }
+
     return(
         
         <div>
             <Add onAdd={addQuestion}/>
             {questions.length>0 ?(
-            <QuestionList questions={questions} onDelete={deleteQuestion}/>
+            <QuestionList questions={questions} onDelete={deleteQuestion} onEdit={handleEditRow} />
             ) : (
                 <NoQuestion/>
             )}
-            </div>
+        
+            {modalOpen &&
+            <Modal closeModal={() => {
+                setModalOpen(false);
+            
+            }}
+           
+            />
+        }
+        </div>
          
     );
 };
