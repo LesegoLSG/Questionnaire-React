@@ -121,10 +121,11 @@ const Create = () =>{
         
         <div>
             <Add onAdd={addQuestion}/>
+            <h1> List of questions </h1>
             {questions.length>0 ?(
             <QuestionList questions={questions} onDelete={deleteQuestion} onEdit={OpenModal} />
             ) : (
-                <NoQuestion/>
+                <NoQuestion noQuestion="Kindly add a question above"/>
             )}
         
             {modalOpen &&
