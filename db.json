@@ -1,16 +1,24 @@
 {
   "questions": [
     {
-      "text": "Mhlongo Lesego",
-      "id": 7
+      "id": 7,
+      "text": "Newss"
     },
     {
-      "text": "checking number 2",
-      "id": 9
+      "id": 11,
+      "text": "Why are you like these?"
     },
     {
-      "text": "The service is great and the price point is perfect. We use it as an alternative to the more expensive services.",
-      "id": 11
+      "text": "Lesego Mhlongo",
+      "id": 12
+    },
+    {
+      "text": "The Economic Freedom Fighters (EFF) is a South African far-left pan-Africanist and Marxist–Leninist political party. It was founded by expelled former African National Congress Youth League (ANCYL) President Julius Malema, and his allies, in 2013.",
+      "id": 13
+    },
+    {
+      "id": 14,
+      "text": "Mhlongo Lesego"
     }
   ]
 }
