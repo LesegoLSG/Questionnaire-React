@@ -10,7 +10,9 @@ const Question = ({quest,onDelete,onEdit}) => {
          
        
        
+        
        <div className="container-question">
+        
             <div className="question">
                 {/*Capitalize the first letter of the question*/}
             <h3>{quest.text}</h3>
@@ -22,6 +24,7 @@ const Question = ({quest,onDelete,onEdit}) => {
                <FaTrash id="trashicon" style={{cursor:"pointer"}} onClick={() =>onDelete(quest.id)}/>
             </div>
        </div>
+    
        
     );
 };
