@@ -2,11 +2,12 @@ import React from 'react';
 import '../Stylesheet/Modal.css';
 import { useState } from 'react';
 
-const Modal = ({ closeModal}) => {
+const Modal = ({ closeModal,UpdateQuestion,Qid,Qtext}) => {
 
     const [editedName, setEditedName] = useState("");
     const [formState, setFormState] = useState({
-        text: "",
+        id:Qid,
+        text: Qtext,
     });
     const [errors, setErrors] = useState("");
 
@@ -38,8 +39,19 @@ const Modal = ({ closeModal}) => {
         e.preventDefault();
         if(!validateForm()) return;
 
+
+        const QuestionToUpdate ={
+            
+        }
+
+        
+
+        UpdateQuestion(formState);
         console.log(formState);
+        console.log("This is where i am here")
         closeModal();
+        console.log("-----------")
+        console.log(Qid);
     }
     /*
     ----------------------------------------------------------------------------
