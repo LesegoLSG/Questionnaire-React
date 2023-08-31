@@ -1,12 +1,14 @@
 import React from 'react'
 import '../Stylesheet/NoQuestion.css'
 
-const NoQuestion = () =>{
+const NoQuestion = (props) =>{
+    
     return(
         <div className="no-question-container">
             
-            <h1>No Questions</h1>
-            <h1>Kindly add above</h1>
+            
+            <h1>No question in the list</h1>
+            <h1>{props.noQuestion}</h1>
         </div>
     );
 };
