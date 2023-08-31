@@ -1,7 +1,10 @@
 import React from 'react';
 import '../Stylesheet/Quiz.css'
 import { FaPen, FaTrash } from 'react-icons/fa'
+import {Link} from 'react-router-dom'
+
 const Question = ({quest,onDelete,onEdit}) => {
+
     
     return (
          
@@ -13,8 +16,10 @@ const Question = ({quest,onDelete,onEdit}) => {
             <h3>{quest.text}</h3>
             </div>
             <div className="icons" >
-                <FaPen style={{cursor:"pointer"}} onClick={() =>onEdit(quest.id)}/>
-                <FaTrash id="trashicon" style={{cursor:"pointer"}} onClick={() =>onDelete(quest.id)}/>
+              
+               <FaPen style={{cursor:"pointer"}} onClick={() =>onEdit(quest)}/>
+              
+               <FaTrash id="trashicon" style={{cursor:"pointer"}} onClick={() =>onDelete(quest.id)}/>
             </div>
        </div>
        
