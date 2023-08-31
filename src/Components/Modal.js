@@ -68,7 +68,7 @@ const Modal = ({ closeModal,UpdateQuestion,Qid,Qtext}) => {
             <div className="modal">
                 <h2>Edit Question</h2>
                 <form>
-                    <input name="text" value={formState.text} onChange={handleChange} id="modal-input"/>
+                    <textarea name="text" value={formState.text} onChange={handleChange} id="modal-input"/>
                     <br />
                     {errors && <div className="error">{`Please include:${errors}`}</div>}
                     <button type="submit" onClick={handleSubmit} id="modal-btn">Submit</button>

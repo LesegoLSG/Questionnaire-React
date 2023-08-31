@@ -52,9 +52,11 @@ const Questionnaire = () => {
             ) : (
                 <NoQuestion noQuestion="Go to create to add a question"/>
             )}
+            {/* 
             {!showDashboard &&
                 <DashDisplay rowCount={rowCount} />
             }
+            */}
         </div>
     );
 };

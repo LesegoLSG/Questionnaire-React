@@ -3,7 +3,7 @@ import '../Stylesheet/Quiz.css'
 
 const Quiz = ({ quest }) => {
     return (
-       
+      
         <div className="Quiz-container">
             <div className="Quiz-question">
                 <h3>{quest.text}</h3>

@@ -14,10 +14,14 @@ const QuizList = ({ questions}) => {
                         key={quest.id}
                         quest={quest}
                     />
+                    
                 ))}
-                
+                <p>Agree: </p>
+                <p>neutral: </p>
+                <p>Disagree: </p>
+
             </div>
-            <button>Submit</button>
+            <button>Submit Quiz answers</button>
 
         </form>
     )

@@ -6,11 +6,11 @@
     },
     {
       "id": 2,
-      "text": "Mhlongo LSGs"
+      "text": "Mhlongo Lesego Kamogelo Mhlongo"
     },
     {
-      "text": "Do you love me or not?",
-      "id": 3
+      "id": 3,
+      "text": "It sounds like you're working on a React application to create a questionnaire with multiple-choice questions and you want to store the questions in a db.json file. When the user"
     },
     {
       "text": "What are your intentions?",
