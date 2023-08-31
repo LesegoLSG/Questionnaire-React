@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 const Create = () =>{
     const [questions , setQuestions]= useState( []);
     const [modalOpen, setModalOpen] = useState(false);
+    const [selectedQuestion, setSelectedQuestion] = useState(null);
     
    
 
@@ -56,21 +57,63 @@ const Create = () =>{
         
     }
 
+    const OpenModal = (ooid) =>{
+        setModalOpen(!modalOpen);
+        //set Question selected
+       
+        console.log("question id = ",ooid);
+        setSelectedQuestion(ooid);
+        
+    }
+    /*
+    const retrieveQuestion = (Qid) =>{
+        const QuestionToUpdate = questions.find(q => q.id ===Qid);
+        setSelectedQuestion(QuestionToUpdate);
+    }
+    */
+
     //Edit a question function
-    const handleEditRow = async(id) =>{
+    const handleEditRow = async(stateFromModal) =>{
+
       
-        /*
-        await fetch(`http://localhost:5001/questions/${id}`,{
+        //console.log(UpdateQ); gives ur Lesego Mhlongo from database
+      
+       try{
+        const res = await fetch(`http://localhost:5001/questions/${stateFromModal.id}`,{
             method:'PUT',
             headers:{
                 'Accept': 'application/json',
                 'Content-Type':'application/json'
             },
+            body:JSON.stringify(stateFromModal),
         });
-        */
+
+        if(res.ok){
+            const allquestions = questions.map(q =>
+                q.id ===stateFromModal.id ? stateFromModal : q
+                );
+                setQuestions(allquestions);
+                setSelectedQuestion(null);
+        }else{
+            alert("Could not update question");
+        }
+    }catch(error){
+        alert("Error updating question:" + error);
+    }
+
+        //const data = await res.json();
+        
+        
+       // console.log(questions.filter((eQuestion) => eQuestion.id));
+        
      
-        setModalOpen(!modalOpen);
-        console.log(id);
+        //setModalOpen(!modalOpen);
+        console.log("selected question(whole):",selectedQuestion);
+        console.log("selected question(id):",selectedQuestion.id);
+        console.log("selected question(text):",selectedQuestion.text);
+        console.log("From modal:",stateFromModal);
+        console.log("button is clicked one");
+        //console.log(id);
         
     }
 
@@ -79,7 +122,7 @@ const Create = () =>{
         <div>
             <Add onAdd={addQuestion}/>
             {questions.length>0 ?(
-            <QuestionList questions={questions} onDelete={deleteQuestion} onEdit={handleEditRow} />
+            <QuestionList questions={questions} onDelete={deleteQuestion} onEdit={OpenModal} />
             ) : (
                 <NoQuestion/>
             )}
@@ -87,9 +130,10 @@ const Create = () =>{
             {modalOpen &&
             <Modal closeModal={() => {
                 setModalOpen(false);
-            
             }}
-           
+            UpdateQuestion={handleEditRow}
+            Qid={selectedQuestion.id}
+            Qtext={selectedQuestion.text}
             />
         }
         </div>
