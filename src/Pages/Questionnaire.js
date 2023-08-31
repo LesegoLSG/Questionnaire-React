@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import QuizList from '../Components/QuizList';
 import Dashboard from './Dashboard';
 import DashDisplay from '../Components/DashDisplay';
+import NoQuestion from '../Components/NoQuestion';
 
 const Questionnaire = () => {
 
@@ -46,7 +47,11 @@ const Questionnaire = () => {
 
     return (
         <div>
+            {questions.length>0 ?(
             <QuizList questions={questions} />
+            ) : (
+                <NoQuestion noQuestion="Go to create to add a question"/>
+            )}
             {!showDashboard &&
                 <DashDisplay rowCount={rowCount} />
             }
