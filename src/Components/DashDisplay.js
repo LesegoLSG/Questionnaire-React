@@ -1,9 +1,10 @@
 import React from 'react';
 import '../Stylesheet/DashDisplay.css';
+import QuizList from '../Components/QuizList';
 
 
 
-const DashDisplay = ({ rowCount }) => {
+const DashDisplay = ({ results }) => {
 
     return (
         <div className="main-dash-container">
@@ -26,7 +27,19 @@ const DashDisplay = ({ rowCount }) => {
                     <h1>145</h1>
                 </div>
             </div>
-
+        {/* 
+            <h1>Each question results</h1>
+            <div>
+                {results.map((result) => (
+                    <div key={result.questionId}>
+                        <p>Question {result.questionId}:</p>
+                        <p>Agree: {result.agree}</p>
+                        <p>Neutral: {result.neutral}</p>
+                        <p>Disagree: {result.disagree}</p>
+                    </div>
+                ))}
+            </div>
+            */}
         </div>
     );
 };
