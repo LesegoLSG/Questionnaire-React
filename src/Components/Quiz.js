@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Stylesheet/Quiz.css'
 
-const Quiz = ({ quest }) => {
+const Quiz = ({ quest,onAnswerChange }) => {
     return (
       
         <div className="Quiz-container">
@@ -16,7 +16,7 @@ const Quiz = ({ quest }) => {
                         name={quest.id}
                         value="Agree"
                     //checked={isSelected("radio1")}
-                    //onChange={handleRadioClick}
+                    onChange={() => onAnswerChange(quest.id, "agree")}
                     />
                 </div>
                 <div className="radio-separator">
@@ -26,7 +26,7 @@ const Quiz = ({ quest }) => {
                         name={quest.id}
                         value="Neutral"
                     //checked={isSelected("radio1")}
-                    //onChange={handleRadioClick}
+                    onChange={() => onAnswerChange(quest.id, "neutral")}
                     />
                 </div >
                 <div className="radio-separator">
@@ -36,7 +36,7 @@ const Quiz = ({ quest }) => {
                         name={quest.id}
                         value="Disagree"
                     //checked={isSelected("radio1")}
-                    //onChange={handleRadioClick}
+                    onChange={() => onAnswerChange(quest.id, "disagree")}
                     />
                 </div>
         
