@@ -15,7 +15,7 @@ const Question = ({quest,onDelete,onEdit}) => {
         
             <div className="question">
                 {/*Capitalize the first letter of the question*/}
-            <h3>{quest.text}</h3>
+            <h5>{quest.text}</h5>
             </div>
             <div className="icons" >
               
