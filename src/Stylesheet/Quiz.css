@@ -3,12 +3,31 @@
     left:25%;
     top:20%;
     align-items: center;
-    
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
+
+#Quiz-btn{
+    position:absolute;
+    left:25%;
+    top:15%;
+    align-items: center;
+    border:none;
+    width:150px;
+    height:30px;
+    background-color: #47abed;
+}
+
+#Quiz-btn:hover{
+    background-color:#0796f5;
+    cursor:pointer;
+}
+
+
 
 .Quiz-container{
     display: flex;
-    background-color: blue;
+    /* background-color: blue; */
     width:800px;
     
     
@@ -20,10 +39,11 @@
     min-height:50px;
     margin-bottom: 10px;
     border-radius:10px;
+    box-shadow:10px #f3f5f2;
 }
 
 .radio-question{
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     display:flex;
     width:300px;
     padding:13px 5px 0px 5px;
@@ -32,8 +52,17 @@
 }
 
 .radio-question .radio-separator{
-    color:red;
+    
     display:grid;
+}
+
+.radio-question .radio-separator input{
+    min-width: 5px;
+    min-height: 5px;
+}
+
+.radio-question .radio-separator input:hover{
+    cursor:pointer;
 }
 
 

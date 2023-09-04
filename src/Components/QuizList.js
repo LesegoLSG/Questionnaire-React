@@ -49,7 +49,7 @@ const QuizList = ({ questions }) => {
                
 
             </div>
-            <button onClick={handleSurveySubmit}>Submit Quiz answers</button>
+            <button id="Quiz-btn" onClick={handleSurveySubmit}>Submit Quiz answers</button>
 
         </form>
     )

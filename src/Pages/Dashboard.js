@@ -6,8 +6,8 @@ const Dashboard = () =>{
     
     
     const [questions , setQuestions]= useState( []);
-    //const [rowCount, setRowCount] = useState(0);
-    /*
+    const [rowCount, setRowCount] = useState(0);
+    
     useEffect(() =>{
         fetch('http://localhost:5001/questions')
         .then(response => response.json())
@@ -19,13 +19,13 @@ const Dashboard = () =>{
             console.error('Error fetching JSON data:', error);
         });
     },[]);
-    */
+    
    
 
     return(
         <div>
        {/*<h1>Number of questions:{rowCount}</h1> */} 
-       <DashDisplay/> 
+       <DashDisplay rowCount={rowCount}/> 
            
         </div>
     );

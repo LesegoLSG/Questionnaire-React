@@ -1,12 +1,12 @@
 import React from 'react';
 import '../Stylesheet/Quiz.css'
 
-const Quiz = ({ quest,onAnswerChange }) => {
+const Quiz = ({ quest, onAnswerChange }) => {
     return (
-      
+
         <div className="Quiz-container">
             <div className="Quiz-question">
-                <h3>{quest.text}</h3>
+                <h5>{quest.text}</h5>
             </div>
             <div className="radio-question">
                 <div className="radio-separator">
@@ -15,8 +15,8 @@ const Quiz = ({ quest,onAnswerChange }) => {
                         type="radio"
                         name={quest.id}
                         value="Agree"
-                    //checked={isSelected("radio1")}
-                    onChange={() => onAnswerChange(quest.id, "agree")}
+                        //checked={isSelected("radio1")}
+                        onChange={() => onAnswerChange(quest.id, "agree")}
                     />
                 </div>
                 <div className="radio-separator">
@@ -25,8 +25,8 @@ const Quiz = ({ quest,onAnswerChange }) => {
                         type="radio"
                         name={quest.id}
                         value="Neutral"
-                    //checked={isSelected("radio1")}
-                    onChange={() => onAnswerChange(quest.id, "neutral")}
+                        //checked={isSelected("radio1")}
+                        onChange={() => onAnswerChange(quest.id, "neutral")}
                     />
                 </div >
                 <div className="radio-separator">
@@ -35,15 +35,15 @@ const Quiz = ({ quest,onAnswerChange }) => {
                         type="radio"
                         name={quest.id}
                         value="Disagree"
-                    //checked={isSelected("radio1")}
-                    onChange={() => onAnswerChange(quest.id, "disagree")}
+                        //checked={isSelected("radio1")}
+                        onChange={() => onAnswerChange(quest.id, "disagree")}
                     />
                 </div>
-        
+
             </div>
         </div>
-       
-       
+
+
     );
 };
 

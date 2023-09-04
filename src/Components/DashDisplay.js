@@ -4,7 +4,7 @@ import QuizList from '../Components/QuizList';
 
 
 
-const DashDisplay = ({ results }) => {
+const DashDisplay = ({ rowCount }) => {
 
     return (
         <div className="main-dash-container">
@@ -12,19 +12,19 @@ const DashDisplay = ({ results }) => {
             <div className="sub-dash-grid-containers">
                 <div className="cont numofquestions">
                     <p>Number of questions:</p>
-                    <h1>145</h1>
+                    <h1>{rowCount}</h1>
                 </div>
                 <div className="cont numofagree">
                     <p>Agreements:</p>
-                    <h1>145</h1>
+                    <h1>0</h1>
                 </div>
                 <div className="cont numofdisagree">
                     <p>Disagreements:</p>
-                    <h1>145</h1>
+                    <h1>0</h1>
                 </div>
                 <div className='cont numofneutral'>
                     <p>Neutrals:</p>
-                    <h1>145</h1>
+                    <h1>0</h1>
                 </div>
             </div>
         {/* 
