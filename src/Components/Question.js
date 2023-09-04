@@ -19,7 +19,7 @@ const Question = ({quest,onDelete,onEdit}) => {
             </div>
             <div className="icons" >
               
-               <FaPen style={{cursor:"pointer"}} onClick={() =>onEdit(quest)}/>
+               <FaPen id="penicon" style={{cursor:"pointer"}} onClick={() =>onEdit(quest)}/>
               
                <FaTrash id="trashicon" style={{cursor:"pointer"}} onClick={() =>onDelete(quest.id)}/>
             </div>

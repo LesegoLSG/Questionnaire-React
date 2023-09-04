@@ -58,7 +58,7 @@
 
 .icons{
     
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     width:100px;
     padding:13px 5px 0px 5px;
     font-size:20px;
@@ -66,10 +66,17 @@
 }
 .question{
     width:450px;
-    background-color:blueviolet;
+    /* background-color:blueviolet; */
+    background-color: #e9f2f2;
+    border-radius: 5px;
 }
 
 #trashicon{
     float:right;
+    color:#c40c1b;
+}
+
+#penicon{
+    color:#0eb517;
 }
 
