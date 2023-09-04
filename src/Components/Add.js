@@ -21,7 +21,7 @@ const Add = ({ onAdd }) => {
 
             <form onSubmit={onSubmit}>
 
-                <h1>Creating a Questionnaire !</h1>
+                <h1>Creating a Questionnaire</h1>
                 <div className="input-box">
                 <input type="text"
                     placeholder="Type your question here"
