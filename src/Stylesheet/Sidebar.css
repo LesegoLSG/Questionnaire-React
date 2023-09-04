@@ -13,7 +13,7 @@ main{
 }
 
 .sidebar{
-    background: #000;
+    background: #47abed;
     color:#fff;
     height:100vh;
     width:300px;
@@ -23,6 +23,19 @@ main{
     display:flex;
     align-items:center;
     padding:20px 15px;
+}
+/*
+.image{
+    width:200px;
+    height:200px;
+    border-radius: 100%;
+    background-color: red;
+}
+*/
+.image img{
+    width:200px;
+    height:200px;
+    border-radius: 100%;
 }
 .Logo{
     font-size:25px;

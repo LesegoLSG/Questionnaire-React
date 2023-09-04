@@ -5,6 +5,8 @@ import {BsFillQuestionCircleFill} from 'react-icons/bs';
 import {MdCreateNewFolder} from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 import {useState} from 'react';
+import SidebarImage from '../Assets/SidebarImage.jpg';
+
 
 const Sidebar = ({children}) =>{
     const [isOpen,setIsOpen] = useState(false);
@@ -31,10 +33,13 @@ const Sidebar = ({children}) =>{
         <div className="container">
             <div style={{width: isOpen ? "250px" : "50px"}} className="sidebar" >
                 <div className="top-section">
-                    <h1 style={{display: isOpen ? "block" : "none"}} className="Logo">Logo</h1>
+                    <h1 style={{display: isOpen ? "block" : "none"}} className="Logo">Lesego</h1>
                     <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
                         <FaBars onClick={toggle}/>
                     </div>
+                </div>
+                <div  className="image">
+                <img style={{width: !isOpen ? "50px" : "200px",height: !isOpen ? "50px":"200px"}} src={SidebarImage}/>
                 </div>
                 {
                     menuItems.map((item,index) =>(
