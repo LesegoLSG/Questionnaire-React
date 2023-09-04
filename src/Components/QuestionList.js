@@ -7,6 +7,7 @@ const QuestionList = ({questions, onDelete, onEdit}) => {
 
     return (
        <div className='main-question'>
+        <h1>List of questions</h1>
        {questions.map((quest) =>(
         <Question 
         key={quest.id} 
