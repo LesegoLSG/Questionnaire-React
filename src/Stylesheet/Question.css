@@ -38,7 +38,13 @@
     top:50%;
     align-items: center;
     background-color: blue;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     
+}
+.main-question h1{
+    text-align:center;
+    margin-bottom: 10px;
 }
 
 .container-question{
