@@ -24,12 +24,14 @@
     height:35px;
     border:none;
     border-radius: 5px;
+    background-color: #e9f2f2;
 }
 
 .input-btn{
     background-color: blueviolet;
     text-align: center;
     height:50px;
+
 
 }
 
@@ -38,11 +40,11 @@
     height:30px;
     border: none;
     border-radius: 3px;
-    background-color: #f3f5f2;
+    background-color: #47abed;
 }
 
 .input-btn button:hover{
     cursor:pointer;
-    background-color:blue;
+    background-color:#0796f5;
     border: none;
 }
