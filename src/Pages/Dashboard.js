@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import DashDisplay from '../Components/DashDisplay';
+import DashDisplayList from '../Components/DashDisplayList';
 
 const Dashboard = () =>{
     
@@ -25,8 +26,8 @@ const Dashboard = () =>{
     return(
         <div>
        {/*<h1>Number of questions:{rowCount}</h1> */} 
-       <DashDisplay rowCount={rowCount}/> 
-           
+        <DashDisplay rowCount={rowCount}/>  
+           {/*<DashDisplayList questions={questions}/>*/}
         </div>
     );
 };
