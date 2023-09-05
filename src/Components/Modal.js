@@ -1,7 +1,9 @@
 import React from 'react';
 import '../Stylesheet/Modal.css';
 import { useState } from 'react';
-
+/*
+    Modal to edit a selected question
+*/
 const Modal = ({ closeModal,UpdateQuestion,Qid,Qtext}) => {
 
     const [editedName, setEditedName] = useState("");
@@ -40,12 +42,9 @@ const Modal = ({ closeModal,UpdateQuestion,Qid,Qtext}) => {
         if(!validateForm()) return;
 
 
-        const QuestionToUpdate ={
-            
-        }
 
         
-
+        //debugging using console(not a good practise)
         UpdateQuestion(formState);
         console.log(formState);
         console.log("This is where i am here")
@@ -60,6 +59,7 @@ const Modal = ({ closeModal,UpdateQuestion,Qid,Qtext}) => {
 
 
     return (
+        //Displaying a modal when edit button is clicked
         <div className="modal-container"
             onClick={(e) => {
                 if (e.target.className === "modal-container")

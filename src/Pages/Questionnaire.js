@@ -11,7 +11,7 @@ const Questionnaire = () => {
     const [questions, setQuestions] = useState([]);
     const [showDashboard, setShowDashboard] = useState(false);
     const [rowCount, setRowCount] = useState(0);
-
+    //fecthing rowCount
     useEffect(() =>{
         fetch('http://localhost:5001/questions')
         .then(response => response.json())

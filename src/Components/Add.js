@@ -2,14 +2,18 @@ import React from 'react';
 import '../Stylesheet/Add.css';
 import { useState } from 'react';
 
-
+/*
+    Component for adding a question
+*/
 const Add = ({ onAdd }) => {
+    //Initial state of our question to be added.
     const [text, setText] = useState('');
 
     // const [agree, setAgree] = useState(0);
     // const [neutral, setNeutral] = useState(0);
     // const [disagree, setDisagree] = useState(0);
 
+    //Sending data to create.js, if input is empty pop-up is displayed.
     const onSubmit = (e) => {
         e.preventDefault();
         if (!text) {
@@ -21,6 +25,7 @@ const Add = ({ onAdd }) => {
         setText("");
     }
     return (
+        //Displaying input,headers and submit button
         <div className="add-container">
 
             <form onSubmit={onSubmit}>
@@ -29,8 +34,6 @@ const Add = ({ onAdd }) => {
                 <div className="input-box">
                 <input type="text"
                     placeholder="Type your question here"
-                    //required
-                   
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                 />

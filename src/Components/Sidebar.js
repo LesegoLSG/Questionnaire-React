@@ -7,6 +7,9 @@ import { NavLink } from 'react-router-dom';
 import {useState} from 'react';
 import SidebarImage from '../Assets/SidebarImage.jpg';
 
+/*
+    Component for displaying a sidebar
+*/
 
 const Sidebar = ({children}) =>{
     const [isOpen,setIsOpen] = useState(false);
@@ -30,6 +33,7 @@ const Sidebar = ({children}) =>{
         },
     ]
     return(
+        //Displaying a sidebar
         <div className="container">
             <div style={{width: isOpen ? "250px" : "50px"}} className="sidebar" >
                 <div className="top-section">

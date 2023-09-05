@@ -2,6 +2,9 @@ import React from 'react';
 import Question from '../Components/Question';
 import '../Stylesheet/Question.css';
 
+/*
+    Component for iterating through a list of questions
+*/
 const QuestionList = ({questions, onDelete, onEdit}) => {
     
 

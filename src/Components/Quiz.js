@@ -1,9 +1,12 @@
 import React from 'react';
 import '../Stylesheet/Quiz.css'
 
+/*
+    Component for displaying questionnaire
+*/
 const Quiz = ({ quest, onAnswerChange }) => {
     return (
-
+        //Displaying questionnaire
         <div className="Quiz-container">
             <div className="Quiz-question">
                 <h5>{quest.text}</h5>

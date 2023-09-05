@@ -3,7 +3,10 @@ import Quiz from '../Components/Quiz';
 import { useState } from 'react'
 import DashDisplay from './DashDisplay';
 
-
+/*
+    Compoent for iterating through a quiz and calculate 
+    a number of agrees, neutrals and disagrees
+*/
 const QuizList = ({ questions, updateResults}) => {
     const [userAnswer, setUserAnswer] = useState({});
     const [myQuestion, setMyQuestion] =useState([questions
@@ -70,7 +73,7 @@ const QuizList = ({ questions, updateResults}) => {
    
 
     return (
-
+        //Displaying a quiz
         <form>
             <div className="main-Quiz">
                 {questions.map((quest) => (

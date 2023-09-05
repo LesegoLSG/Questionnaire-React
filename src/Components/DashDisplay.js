@@ -2,10 +2,12 @@ import React from 'react';
 import '../Stylesheet/DashDisplay.css';
 import QuizList from '../Components/QuizList';
 
-
+/*
+    Component for displaying results 
+*/
 
 const DashDisplay = ({ rowCount, quest }) => {
-
+    //Displaying results to the Dashboard
     return (
         <div className="main-dash-container">
             

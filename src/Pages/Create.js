@@ -41,11 +41,7 @@ const Create = () =>{
 
         const data = await res.json();
         setQuestions([...questions, data]);
-        /*
-       const id = Math.floor(Math.random() * 10000) + 1;
-       const newQuestion =  {id, ...addQ};
-       setQuestions([...questions,newQuestion]);
-       */
+     
     }
 
     //Delete a question function
@@ -56,7 +52,7 @@ const Create = () =>{
         setQuestions(questions.filter((eQuestion) => eQuestion.id !==id));
         
     }
-
+    //Openning a modal and sets selectedQuestion
     const OpenModal = (ooid) =>{
         setModalOpen(!modalOpen);
         //set Question selected
@@ -74,10 +70,6 @@ const Create = () =>{
 
     //Edit a question function
     const handleEditRow = async(stateFromModal) =>{
-
-      
-        //console.log(UpdateQ); gives ur Lesego Mhlongo from database
-      
        try{
         const res = await fetch(`http://localhost:5001/questions/${stateFromModal.id}`,{
             method:'PUT',
@@ -101,24 +93,17 @@ const Create = () =>{
         alert("Error updating question:" + error);
     }
 
-        //const data = await res.json();
-        
-        
-       // console.log(questions.filter((eQuestion) => eQuestion.id));
-        
-     
-        //setModalOpen(!modalOpen);
+        //Debugging (not a good way)
         console.log("selected question(whole):",selectedQuestion);
         console.log("selected question(id):",selectedQuestion.id);
         console.log("selected question(text):",selectedQuestion.text);
         console.log("From modal:",stateFromModal);
         console.log("button is clicked one");
-        //console.log(id);
         
     }
 
     return(
-        
+        //Displaying add component and list of questions
         <div>
             <Add onAdd={addQuestion}/>
             

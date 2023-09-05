@@ -3,14 +3,14 @@ import '../Stylesheet/Quiz.css'
 import { FaPen, FaTrash } from 'react-icons/fa'
 import {Link} from 'react-router-dom'
 
+/*
+    Component for displaying a question, when a question is being added
+*/
 const Question = ({quest,onDelete,onEdit}) => {
 
     
     return (
-         
-       
-       
-        
+    //Displaying a question
        <div className="container-question">
         
             <div className="question">

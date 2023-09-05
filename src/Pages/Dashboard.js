@@ -8,7 +8,7 @@ const Dashboard = () =>{
     
     const [questions , setQuestions]= useState( []);
     const [rowCount, setRowCount] = useState(0);
-    
+    //fetching rowcount
     useEffect(() =>{
         fetch('http://localhost:5001/questions')
         .then(response => response.json())
