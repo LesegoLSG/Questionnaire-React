@@ -4,11 +4,13 @@ import QuizList from '../Components/QuizList';
 
 
 
-const DashDisplay = ({ rowCount }) => {
+const DashDisplay = ({ rowCount, quest }) => {
 
     return (
         <div className="main-dash-container">
+            
             <h1>Dashboard</h1>
+            
             <div className="sub-dash-grid-containers">
                 <div className="cont numofquestions">
                     <p>Number of questions:</p>
@@ -27,6 +29,7 @@ const DashDisplay = ({ rowCount }) => {
                     <h1>0</h1>
                 </div>
             </div>
+    
         {/* 
             <h1>Each question results</h1>
             <div>
@@ -38,6 +41,16 @@ const DashDisplay = ({ rowCount }) => {
                         <p>Disagree: {result.disagree}</p>
                     </div>
                 ))}
+            </div>
+            */}
+
+            {/*
+            <div className="newDisplay">
+                <p>id: {quest.id}</p>
+                <p>text: {quest.text}</p>
+                <p>agree:{quest.agree}</p>
+                <p>neutral: {quest.neutal}</p>
+                <p>disagree: {quest.disagree}</p>
             </div>
             */}
         </div>
