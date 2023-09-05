@@ -5,7 +5,12 @@
     align-items: center;
     font-family: 'Inter', sans-serif;
     font-family: 'Roboto', sans-serif;
+     height: 400px;
+    overflow: hidden;
+    overflow-y:scroll ;
+    scrollbar-color: red green;
 }
+
 
 #Quiz-btn{
     position:absolute;
@@ -57,8 +62,8 @@
 }
 
 .radio-question .radio-separator input{
-    min-width: 5px;
-    min-height: 5px;
+    max-width: 20px;
+    max-height: 20px;
 }
 
 .radio-question .radio-separator input:hover{
