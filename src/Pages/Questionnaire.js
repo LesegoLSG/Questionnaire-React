@@ -45,10 +45,32 @@ const Questionnaire = () => {
         return data;
     }
 
+    //Edit a question function
+    const handleResults = async(myQuestion) =>{
+
+      
+        //console.log(UpdateQ); gives ur Lesego Mhlongo from database
+      
+       try{
+        const res = await fetch(`http://localhost:5001/questions/${myQuestion.id}`,{
+            method:'PUT',
+            headers:{
+                'Accept': 'application/json',
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify(myQuestion),
+        });
+
+        
+    }catch(error){
+        alert("Error updating question:" + error);
+    } 
+    }
+
     return (
         <div>
             {questions.length>0 ?(
-            <QuizList questions={questions} />
+            <QuizList questions={questions} updateResults={handleResults} />
             ) : (
                 <NoQuestion noQuestion="Go to create to add a question"/>
             )}
