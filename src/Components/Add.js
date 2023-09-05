@@ -6,6 +6,10 @@ import { useState } from 'react';
 const Add = ({ onAdd }) => {
     const [text, setText] = useState('');
 
+    // const [agree, setAgree] = useState(0);
+    // const [neutral, setNeutral] = useState(0);
+    // const [disagree, setDisagree] = useState(0);
+
     const onSubmit = (e) => {
         e.preventDefault();
         if (!text) {
